@@ -78,3 +78,16 @@ for line in f.readlines():
 f.close()
 okfile.close()
 badfile.close()
+
+
+
+**************************************************
+
+
+put it on server
+    execute command: python [path to script] [path to soap log] [path where to create file with OK] [path where to create file with ERROR]
+    Example:
+    python /temp/parse-soap-log-v4.py /logs/Web_SASServer7_1/DSEngineServer-SOAP.log /temp/ok.log /temp/bad.log
+    if you want to sort results by execution time (first column) then after first command run this: sort -r -g [path to file to be sorted] > [path where to create sorted file]
+    Example:
+    sort -r -g /temp/ok.log > /temp/ok_sorted.log
